@@ -65,5 +65,5 @@ npm run delete
 ├── .gitignore                    # Список исключённых файлов из Git
 ├── gulpfile.babel.js             # Файл для запуска Gulp.js
 ├── package.json                  # Список модулей и прочей информации
-├── readme.md                     # Документация шаблона
+└── readme.md                     # Документация шаблона
 ```
