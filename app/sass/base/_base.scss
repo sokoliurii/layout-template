@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: auto;
+  min-width: $min-width;
+  min-height: 100%;
+  text-align: center;
+  font-family: $font-base;
+  font-weight: normal;
+  color: $font-color;
+}
