@@ -6,6 +6,7 @@
     <title>Boilerplate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
@@ -13,6 +14,23 @@
     <link rel="shortcut icon" href="img/favicons/favicon.ico">
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        background-image: url( "../mockups/home_320.jpg" );
+      }
+      @media (min-width: 544px)  { html { background-image: url("../mockups/home_544.jpg")  }}
+      @media (min-width: 760px)  { html { background-image: url("../mockups/home_760.jpg")  }}
+      @media (min-width: 1020px) { html { background-image: url("../mockups/home_1020.jpg") }}
+      @media (min-width: 1280px) { html { background-image: url("../mockups/home.jpg")      }}
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- Pixel Glass -->
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,9 +40,6 @@
 
 
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
   </body>

@@ -4,7 +4,7 @@ import watch from 'gulp-watch';
 
 
 gulp.task('watch', () => {
-  watch('app/*.{html,php}', () => {
+  watch(['app/**', '!app/sass{,/**}', '!app/img{,/**}', '!app/js{,/**}', '!app/fonts{,/**}'], () => {
     gulp.start('assets');
   })
   watch(['app/sass/**/*.scss'], () => {
@@ -13,7 +13,7 @@ gulp.task('watch', () => {
   watch('app/js/**/*.js', () => {
     gulp.start('js')
   })
-  watch(['app/img/**/*.png', 'app/img/**/*.jpg', 'app/img/**/*.gif', 'app/img/**/*.svg', 'app/img/**/*.json', 'app/img/**/*.xml', '!app/img/sprite/*.png', '!app/img/build-favicon/**/*'], () => {
+  watch(['app/img/**/*.{png,jpg,svg,gif,json,xml,ico}', '!app/img/sprite/**/*'], () => {
     gulp.start('img')
   })
   watch('app/img/sprite/*.png', () => {

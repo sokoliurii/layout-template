@@ -6,9 +6,12 @@ body {
   position: relative;
   width: auto;
   min-width: $min-width;
+  max-width: $max-width;
   min-height: 100%;
+  margin: 0 auto;
   text-align: center;
   font-family: $font-base;
   font-weight: normal;
   color: $font-color;
+  background-color: $background-color;
 }

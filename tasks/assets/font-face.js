@@ -137,7 +137,9 @@ fontsNames.map(fontName => {
 
 
 /** Очищаем файл типографики **/
-fs.writeFile(fontsFile, '');
+fs.writeFile(fontsFile, '', err => {
+	if(err) return err;
+});
 
 
 
@@ -152,7 +154,7 @@ fontFaces.map(font => {
 
 `
 
-	fs.appendFile(fontsFile, fontFace, function(err)  {
+	fs.appendFile(fontsFile, fontFace, err =>  {
 		if(err) return err;
 		console.log(`Добавлен шрифт ${font.name}, с начертанием ${font.styleName}.`);
 	});

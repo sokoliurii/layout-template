@@ -9,13 +9,13 @@ npm i
 ```sh
 npm run start
 ```
+#### Production сборка:
+```sh
+npm run start
+```
 #### Генерация типографики:
 ```sh
 npm run font-face
-```
-#### Удаление папки public:
-```sh
-npm run delete
 ```
 ## Структура папок и файлов
 ```
@@ -45,25 +45,10 @@ npm run delete
 │   │   └── favicons/             # Фавиконки
 │   ├── js/                       # Скрипты
 │   └── index.html                # Страница
-├── tasks/                        # Подключаемые скрипты с задачами для gulpfile.babel.js
-│   ├── assets/                   # Дополнительные файлы сборщика
-│   │   ├── gulp.png              # Картинка ошибки сборщика
-│   │   └── font-face.js          # Утилита для генерации типографики проекта
-│   ├── assets.js                 # Копирование
-│   ├── assets-scripts.js         # Копирование скриптов
-│   ├── default.js                # Сборка проекта и запуск watcher'а
-│   ├── error.js                  # Обработчик ощибок
-│   ├── fonts.js                  # Копирование шрифтов
-│   ├── images.js                 # Сжатие картинок
-│   ├── scripts.js                # Сборка ES2015 скриптов
-│   ├── server.js                 # Запуск локального сервера
-│   ├── sprite.js                 # Сборка спрайтов
-│   ├── styles.js                 # Сборка стилей
-│   └── watch.js                  # Настройка watcher'а
+├── tasks/                        # Таски проекта
 ├── .babelrc                      # Конфигурация babel
 ├── .editorconfig                 # Конфигурация настроек редактора кода
 ├── .gitignore                    # Список исключённых файлов из Git
 ├── gulpfile.babel.js             # Файл для запуска Gulp.js
-├── package.json                  # Список модулей и прочей информации
-└── readme.md                     # Документация шаблона
+└── package.json                  # Список модулей и прочей информации
 ```

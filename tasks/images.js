@@ -8,8 +8,8 @@ import browserSync from 'browser-sync';
 
 gulp.task('img', () => {
   gulp.src(['app/img/**/*.{png,jpg,svg,gif,json,xml,ico}', '!app/img/sprite/**/*'])
-    .pipe(clean('public/img'))
     // .pipe(changed('app/img'))
+    // .pipe(clean('public/img'))
     .pipe(imagemin({
       progressive: true,
       interlaced: true,
