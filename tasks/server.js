@@ -6,7 +6,7 @@ import browserSync from 'browser-sync';
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: ['./', 'public']
+      baseDir: ['./', 'dist']
     }
   });
 });

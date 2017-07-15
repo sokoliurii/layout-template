@@ -15,7 +15,7 @@ let errorHandler = function(err) {
     sound: true
   });
   if(this) {
-  	this.emit('end');
+    this.emit('end');
   }
 }
 

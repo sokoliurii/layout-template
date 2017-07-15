@@ -11,7 +11,7 @@ import errorHandler from './error';
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
-console.log(isDevelopment);
+
 
 gulp.task('js', () => {
   browserify({
@@ -29,6 +29,6 @@ gulp.task('js', () => {
   .pipe(gulpIf(isDevelopment, sourcemaps.init()))
   .pipe(gulpIf(!isDevelopment, uglify()))
   .pipe(gulpIf(isDevelopment, sourcemaps.write('map')))
-  .pipe(gulp.dest('public/js'));
+  .pipe(gulp.dest('dist/js'));
   browserSync.reload();
 });

@@ -28,18 +28,16 @@ npm run font-face
 │   │   └── vendor/               # Вендорные скрипты
 │   │   └── plugins.js            # Файл для подключения плагинов
 │   │   └── script.js             # Главный скрипт
-│   └── sass/                     # Стили
+│   └── css/                      # Стили
 │   │   ├── base                  # Базовые стили
-│   │   │   ├── mixins/           # Миксины шаблона
-│   │   │   ├── _base.scss        # Базовые стили шаблона
-│   │   │   ├── _default.scss     # Сброс стилей
-│   │   │   ├── _typography.scss  # Подключение шрифтов
-│   │   │   └── _variables.scss   # Переменные стилей
+│   │   │   ├── base.scss         # Базовые стили шаблона
+│   │   │   ├── default.scss      # Сброс стилей
+│   │   │   ├── typography.scss   # Подключение шрифтов
+│   │   │   └── variables.scss    # Переменные стилей
 │   │   ├── blocks/               # Стили блоков
-│   │   ├── libs/                 # Библиотеки
 │   │   └── style.scss            # Корневой файл стилей
 │   └── index.html                # Страница
-├── public/                       # Директория сборки
+├── dist/                         # Директория сборки
 │   ├── css/                      # Стили
 │   ├── img/                      # Изображения
 │   │   └── favicons/             # Фавиконки
@@ -48,7 +46,9 @@ npm run font-face
 ├── tasks/                        # Таски проекта
 ├── .babelrc                      # Конфигурация babel
 ├── .editorconfig                 # Конфигурация настроек редактора кода
+├── .eslintrc                     # Конфигурация ESLint
 ├── .gitignore                    # Список исключённых файлов из Git
+├── .stylelintrc                  # Конфигурация stylelint
 ├── gulpfile.babel.js             # Файл для запуска Gulp.js
 └── package.json                  # Список модулей и прочей информации
 ```

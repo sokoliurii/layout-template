@@ -3,7 +3,7 @@ import path from 'path';
 
 const fontsDir = 'app/fonts/'; // Директория шрифтовых файлов
 const fontsCSSDir = '../fonts/'; // Путь относительно к папке со шрифтами относительно файла типографики
-const fontsFile = 'app/sass/base/_typography.scss'; // Путь к файлу типографики
+const fontsFile = 'app/css/base/typography.css'; // Путь к файлу типографики
 
 let fontsPaths = [];
 let fontsNames = [];
@@ -44,8 +44,8 @@ fontsNames.map(fontName => {
 	/** Относительный путь на шрифтовой файл **/
 	if(fontName == path.parse(fontPath).name) {
 		fontExtension = path.extname(fontPath).replace('.', '');
-		let url = `url("${fontsCSSDir + fontPath}") format("${fontExtension}")`;
-		font.src == '' ? font.src = url : font.src += ',\n\t\t' + url;
+		let url = `url('${fontsCSSDir + fontPath}') format('${fontExtension}')`;
+		font.src == '' ? font.src = url : font.src += ',\n    ' + url;
 	}
 	});
 
@@ -142,11 +142,13 @@ fs.writeFile(fontsFile, '', err => {
 });
 
 
-
 /** Подставляем код в файл типографики и делаем вывод в консоль **/
 fontFaces.map(font => {
+	/** Проверяем из скольки слов состоит имя гарнитуры, если их нескольких, то оборачиваем его в кавычки **/
+	font.name = font.name.indexOf(' ') >= 0 ? "'" + font.name + "'" : font.name;
+
 	let fontFace = `@font-face {
-  font-family: "${font.name}";
+  font-family: ${font.name};
   src: ${font.src};
   font-weight: ${font.weight};
   font-style: ${font.style};
