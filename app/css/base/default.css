@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -43,15 +41,17 @@ template {
 html {
   cursor: default;
   font-family: sans-serif;
+
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-focus-ring-color: hsla(0, 0%, 100%, 0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-focus-ring-color: hsla(0,0%,100%,0);
 }
 
 body {
   font-size: 100%;
   line-height: 1;
+
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -113,6 +113,7 @@ html input[type=button],
 input[type=reset],
 input[type=submit] {
   cursor: pointer;
+
   -webkit-appearance: button;
 }
 
@@ -133,6 +134,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=search] {
   box-sizing: content-box;
+
   -webkit-appearance: textfield;
 }
 

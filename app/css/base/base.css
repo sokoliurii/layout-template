@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  position: relative;
+  width: auto;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  min-height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-base);
+  font-weight: 400;
+  color: var(--font-color);
+}

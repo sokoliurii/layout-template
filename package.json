@@ -1,6 +1,5 @@
 {
   "name": "layout-template",
-  "version": "2.0",
   "author": "Sokol I",
   "scripts": {
     "start": "gulp",

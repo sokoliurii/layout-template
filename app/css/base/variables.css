@@ -1,0 +1,19 @@
+/*
+  Media queries
+ */
+:root {
+  @custom-media --xs (min-width: 544px);
+  @custom-media --sm (min-width: 768px);
+  @custom-media --md (min-width: 1020px);
+  @custom-media --lg (min-width: 1170px);
+  --min-width: 320px;
+  --max-width: 1920px;
+}
+
+/*
+  Typography and colors
+ */
+:root {
+  --font-base: Roboto, Arial, Verdana, sans-serif;
+  --font-color: #000000;
+}
