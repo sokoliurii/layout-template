@@ -44,5 +44,14 @@
     "stylelint-order": "^0.5.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "aos": "^2.2.0",
+    "dompurify": "^0.9.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-sassy-import": "^1.2.3",
+    "simple-slider": "^1.0.0",
+    "snapsvg": "^0.5.1"
   }
 }

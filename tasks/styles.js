@@ -9,7 +9,7 @@ import gulpIf from 'gulp-if';
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 const spriteOpts = {
-  spritePath: 'app/img/',
+  spritePath: 'dist/img/',
   filterBy: image => {
     // Check if image in sprite folder
     if (!/sprite/.test(image.url)) {
@@ -25,11 +25,12 @@ gulp.task('styles', () => {
   gulp.src('app/css/style.css')
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
     .pipe(postcss([
-      require('postcss-import')(),
+      require('postcss-sassy-import')(),
       // require('stylelint')(),
       require('postcss-sprites')(spriteOpts),
       require('postcss-svg')({nonFragments: true}),
-      // require("postcss-custom-media")(),
+      require("postcss-custom-media")(),
+      require('postcss-hexrgba'),
       // require('postcss-url')(),
       require('postcss-cssnext')(),
       require('postcss-browser-reporter')(),
