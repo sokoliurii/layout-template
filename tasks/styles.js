@@ -9,7 +9,7 @@ import gulpIf from 'gulp-if';
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 const spriteOpts = {
-  spritePath: 'dist/img/',
+  spritePath: 'dist/img/sprite/',
   filterBy: image => {
     // Check if image in sprite folder
     if (!/sprite/.test(image.url)) {
