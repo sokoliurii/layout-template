@@ -8,16 +8,16 @@ import gulpIf from 'gulp-if';
 
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
-const spriteOpts = {
-  spritePath: 'dist/img/sprite/',
-  filterBy: image => {
-    // Check if image in sprite folder
-    if (!/sprite/.test(image.url)) {
-			return Promise.reject();
-		}
-		return Promise.resolve();
-  }
-}
+// const spriteOpts = {
+//   spritePath: 'dist/img/sprite/',
+//   filterBy: image => {
+//     // Check if image is in sprite folder
+//     if (!/sprite/.test(image.url)) {
+//       return Promise.reject();
+//     }
+//     return Promise.resolve();
+//   }
+// }
 
 
 
@@ -27,12 +27,12 @@ gulp.task('styles', () => {
     .pipe(postcss([
       require('postcss-sassy-import')(),
       // require('stylelint')(),
-      require('postcss-sprites')(spriteOpts),
+      // require('postcss-sprites')(spriteOpts),
+      require('postcss-nesting'),
       require('postcss-svg')({nonFragments: true}),
-      require("postcss-custom-media")(),
+      require('postcss-custom-media')(),
+      require('postcss-custom-properties')(),
       require('postcss-hexrgba'),
-      // require('postcss-url')(),
-      require('postcss-cssnext')(),
       require('postcss-browser-reporter')(),
       require('postcss-reporter')(),
     ]))
