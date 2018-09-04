@@ -11,7 +11,7 @@ npm run start
 ```
 #### Production сборка:
 ```sh
-npm run start
+npm run production
 ```
 #### Генерация типографики:
 ```sh
